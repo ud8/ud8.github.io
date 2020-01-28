@@ -1,0 +1,29 @@
+//http://honglung.pixnet.net/blog/post/214890828-javascript-%E8%AE%80%E5%8F%96%E7%9B%AE%E6%A8%99%E7%9B%AE%E9%8C%84%E5%85%A7%E6%89%80%E6%9C%89%E6%AA%94%E6%A1%88
+<body> 
+<H1> 圖片顯示器</H1>
+<input type="file" webkitdirectory="true" id="my_test">
+<div id="pics_area">
+</div>
+
+
+<p>Created by Lung yu, tsai</p>
+<script> 
+
+document.getElementById('my_test').addEventListener('change', function(event) {	//my_test 為觸發運作的按鈕
+	let files = event.target.files;	//選取之目標目錄內的檔案清單
+	let listing = document.getElementById('pics_area');	//(透過id)取得要放置圖片的標籤位置
+
+	for(let i=0; i<files.length; i++) {
+                alert(files)
+		//let item = document.createElement("img");	//產生圖片標籤
+		//item.src = files[i].webkitRelativePath;	//設定圖片的來源位置
+		//item.style.padding = "50px 10px 20px 30px"; //排版用
+		//listing.appendChild(item);
+		//alert(files[i].webkitRelativePath);
+	}
+});
+
+
+</script> 
+
+</body>

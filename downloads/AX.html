@@ -1,0 +1,14 @@
+<body onload=getDir();> 
+
+
+<script> 
+function getDir(){
+  var locHref = location.href;      //取得完整路徑，包含檔案名稱
+alert(locHref);
+  var locArr = locHref.split("/");  //用"/"切分，並存至locArr陣列
+  //delete locArr[locArr.length - 1];//刪除locArr陣列的最後一個元素，即檔案名稱
+  alert(locArr.join("/"));      //用"/"毀locArr陣列中的元素合併，傳回字串值
+}
+</script> 
+
+</body>
