@@ -1,0 +1,16 @@
+<html>
+<body>
+    <button onclick="rdr()">前往參數網址
+    </button>
+</body>
+
+<script>
+    function rdr() {
+        var url = location.href;
+        if(url.indexOf('?') != -1) {
+            //alert(url.slice(url.indexOf('?')+1))
+            location.href=url.slice(url.indexOf('?')+1);
+        }
+    }
+</script>
+</html>
