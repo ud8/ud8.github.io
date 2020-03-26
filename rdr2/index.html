@@ -8,10 +8,11 @@
 <script>
     function init() {
         var url = location.href;
+        if(url.indexOf('fbclid') != -1) {
+            url=url.slice(0, url.indexOf('fbclid')-1);
+        }
         if(url.indexOf('?') != -1) {
-            //alert(url.slice(url.indexOf('?')+1))
-            ;
-            
+            //alert(url.slice(url.indexOf('?')+1)) 
             var lnk = document.getElementById("lnk")
             lnk.value = url.slice(url.indexOf('?')+1)
         }
