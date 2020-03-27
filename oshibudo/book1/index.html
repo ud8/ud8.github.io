@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=2.5,user-scalable=yes">
+	<meta name="full-screen" content="yes">
+	<meta name="browsermode" content="application">
+	<meta name="x5-pagetype" content="webapp">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="white">
+	<title>神推漫畫(日文第一卷)</title>
+	<meta name="maga"" content="神推偶像登上武道館我就死而無憾">
+	<link href="./data/style.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="./data/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="./data/scroll.photos.js"></script>
+	<script type="text/javascript">
+		var hash = window.location.hash;
+		if (!hash) { hash = 0; }
+		else { hash = parseInt(hash.replace("#", "")) - 1; }
+		var imglist = [
+			{ url: "./data/b1/cover.jpg"},
+			{ url: "./data/b1/i-white.jpg"},
+			{ url: "./data/b1/i-001.jpg"},
+			{ url: "./data/b1/i-002.jpg"},
+			{ url: "./data/b1/i-003.jpg"},
+			{ url: "./data/b1/i-004.jpg"},
+			{ url: "./data/b1/i-005.jpg"},
+			{ url: "./data/b1/i-006.jpg"},
+			{ url: "./data/b1/i-007.jpg"},
+			{ url: "./data/b1/i-008.jpg"},
+			{ url: "./data/b1/i-009.jpg"},
+			{ url: "./data/b1/i-010.jpg"},
+			{ url: "./data/b1/i-011.jpg"},
+			{ url: "./data/b1/i-012.jpg"},
+			{ url: "./data/b1/i-013.jpg"},
+			{ url: "./data/b1/i-014.jpg"},
+			{ url: "./data/b1/i-015.jpg"},
+			{ url: "./data/b1/i-016.jpg"},
+			{ url: "./data/b1/i-017.jpg"},
+			{ url: "./data/b1/i-018.jpg"},
+			{ url: "./data/b1/i-019.jpg"},
+			{ url: "./data/b1/i-020.jpg"},
+			{ url: "./data/b1/i-021.jpg"},
+			{ url: "./data/b1/i-022.jpg"},
+			{ url: "./data/b1/i-023.jpg"},
+			{ url: "./data/b1/i-024.jpg"},
+			{ url: "./data/b1/i-025.jpg"},
+			{ url: "./data/b1/i-026.jpg"},
+			{ url: "./data/b1/i-027.jpg"},
+			{ url: "./data/b1/i-028.jpg"},
+			{ url: "./data/b1/i-029.jpg"},
+			{ url: "./data/b1/i-030.jpg"},
+			{ url: "./data/b1/i-031.jpg"},
+			{ url: "./data/b1/i-032.jpg"},
+			{ url: "./data/b1/i-033.jpg"},
+			{ url: "./data/b1/i-034.jpg"},
+			{ url: "./data/b1/i-035.jpg"},
+			{ url: "./data/b1/i-036.jpg"},
+			{ url: "./data/b1/i-037.jpg"},
+			{ url: "./data/b1/i-038.jpg"},
+			{ url: "./data/b1/i-039.jpg"},
+			{ url: "./data/b1/i-040.jpg"},
+			{ url: "./data/b1/i-041.jpg"},
+			{ url: "./data/b1/i-042.jpg"},
+			{ url: "./data/b1/i-043.jpg"},
+			{ url: "./data/b1/i-044.jpg"},
+			{ url: "./data/b1/i-045.jpg"},
+			{ url: "./data/b1/i-046.jpg"},
+			{ url: "./data/b1/i-047.jpg"},
+			{ url: "./data/b1/i-048.jpg"},
+			{ url: "./data/b1/i-049.jpg"},
+			{ url: "./data/b1/i-050.jpg"},
+			{ url: "./data/b1/i-051.jpg"},
+			{ url: "./data/b1/i-052.jpg"},
+			{ url: "./data/b1/i-053.jpg"},
+			{ url: "./data/b1/i-054.jpg"},
+			{ url: "./data/b1/i-055.jpg"},
+			{ url: "./data/b1/i-056.jpg"},
+			{ url: "./data/b1/i-057.jpg"},
+			{ url: "./data/b1/i-058.jpg"},
+			{ url: "./data/b1/i-059.jpg"},
+			{ url: "./data/b1/i-060.jpg"},
+			{ url: "./data/b1/i-061.jpg"},
+			{ url: "./data/b1/i-062.jpg"},
+			{ url: "./data/b1/i-063.jpg"},
+			{ url: "./data/b1/i-064.jpg"},
+			{ url: "./data/b1/i-065.jpg"},
+			{ url: "./data/b1/i-066.jpg"},
+			{ url: "./data/b1/i-067.jpg"},
+			{ url: "./data/b1/i-068.jpg"},
+			{ url: "./data/b1/i-069.jpg"},
+			{ url: "./data/b1/i-070.jpg"},
+			{ url: "./data/b1/i-071.jpg"},
+			{ url: "./data/b1/i-072.jpg"},
+			{ url: "./data/b1/i-073.jpg"},
+			{ url: "./data/b1/i-074.jpg"},
+			{ url: "./data/b1/i-075.jpg"},
+			{ url: "./data/b1/i-076.jpg"},
+			{ url: "./data/b1/i-077.jpg"},
+			{ url: "./data/b1/i-078.jpg"},
+			{ url: "./data/b1/i-079.jpg"},
+			{ url: "./data/b1/i-080.jpg"},
+			{ url: "./data/b1/i-081.jpg"},
+			{ url: "./data/b1/i-082.jpg"},
+			{ url: "./data/b1/i-083.jpg"},
+			{ url: "./data/b1/i-084.jpg"},
+			{ url: "./data/b1/i-085.jpg"},
+			{ url: "./data/b1/i-086.jpg"},
+			{ url: "./data/b1/i-087.jpg"},
+			{ url: "./data/b1/i-088.jpg"},
+			{ url: "./data/b1/i-089.jpg"},
+			{ url: "./data/b1/i-090.jpg"},
+			{ url: "./data/b1/i-091.jpg"},
+			{ url: "./data/b1/i-092.jpg"},
+			{ url: "./data/b1/i-093.jpg"},
+			{ url: "./data/b1/i-094.jpg"},
+			{ url: "./data/b1/i-095.jpg"},
+			{ url: "./data/b1/i-096.jpg"},
+			{ url: "./data/b1/i-097.jpg"},
+			{ url: "./data/b1/i-098.jpg"},
+			{ url: "./data/b1/i-099.jpg"},
+			{ url: "./data/b1/i-100.jpg"},
+			{ url: "./data/b1/i-101.jpg"},
+			{ url: "./data/b1/i-102.jpg"},
+			{ url: "./data/b1/i-103.jpg"},
+			{ url: "./data/b1/i-104.jpg"},
+			{ url: "./data/b1/i-105.jpg"},
+			{ url: "./data/b1/i-106.jpg"},
+			{ url: "./data/b1/i-107.jpg"},
+			{ url: "./data/b1/i-108.jpg"},
+			{ url: "./data/b1/i-109.jpg"},
+			{ url: "./data/b1/i-110.jpg"},
+			{ url: "./data/b1/i-111.jpg"},
+			{ url: "./data/b1/i-112.jpg"},
+			{ url: "./data/b1/i-113.jpg"},
+			{ url: "./data/b1/i-114.jpg"},
+			{ url: "./data/b1/i-115.jpg"},
+			{ url: "./data/b1/i-116.jpg"},
+			{ url: "./data/b1/i-117.jpg"},
+			{ url: "./data/b1/i-118.jpg"},
+			{ url: "./data/b1/i-119.jpg"},
+			{ url: "./data/b1/i-120.jpg"},
+			{ url: "./data/b1/i-121.jpg"},
+			{ url: "./data/b1/i-122.jpg"},
+			{ url: "./data/b1/i-123.jpg"},
+			{ url: "./data/b1/i-124.jpg"},
+			{ url: "./data/b1/i-125.jpg"},
+			{ url: "./data/b1/i-126.jpg"},
+			{ url: "./data/b1/i-127.jpg"},
+			{ url: "./data/b1/i-128.jpg"},
+			{ url: "./data/b1/i-129.jpg"},
+			{ url: "./data/b1/i-130.jpg"},
+			{ url: "./data/b1/i-131.jpg"},
+			{ url: "./data/b1/i-132.jpg"},
+			{ url: "./data/b1/i-133.jpg"},
+			{ url: "./data/b1/i-134.jpg"},
+			{ url: "./data/b1/i-135.jpg"},
+			{ url: "./data/b1/i-136.jpg"},
+			{ url: "./data/b1/i-137.jpg"},
+			{ url: "./data/b1/i-138.jpg"},
+			{ url: "./data/b1/i-139.jpg"},
+			{ url: "./data/b1/i-140.jpg"},
+			{ url: "./data/b1/i-141.jpg"},
+			{ url: "./data/b1/i-142.jpg"},
+			{ url: "./data/b1/i-143.jpg"},
+			{ url: "./data/b1/i-144.jpg"},
+			{ url: "./data/b1/i-145.jpg"},
+			{ url: "./data/b1/i-146.jpg"},
+			{ url: "./data/b1/i-147.jpg"},
+			{ url: "./data/b1/i-148.jpg"},
+			{ url: "./data/b1/i-149.jpg"},
+			{ url: "./data/b1/i-150.jpg"},
+			{ url: "./data/b1/i-151.jpg"},
+			{ url: "./data/b1/i-152.jpg"},
+			{ url: "./data/b1/i-153.jpg"},
+			{ url: "./data/b1/i-154.jpg"},
+			{ url: "./data/b1/i-155.jpg"},
+			{ url: "./data/b1/i-156.jpg"},
+			{ url: "./data/b1/i-colophon.jpg"},
+		];
+		$(function () { imgscroll.beLoad($("#img_list"), imglist, hash); });
+	</script>
+</head>
+
+<body style="background:rgb(255, 176, 185);">
+	<div class="shareBox" id="shareBox"></div>
+
+	<div id="img_list">
+		<style>
+			img {
+				max-width: 100% !important;
+				height: auto !important;
+			}
+		</style>
+	</div>
+</body>
+
+</html>
