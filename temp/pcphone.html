@@ -1,0 +1,29 @@
+<!DOCTYPE html> 
+<html>
+<p id="yee"></p> 
+<head> 
+<meta charset="UTF-8"> 
+<title></title> 
+<style type="text/css"> 
+ul{ 
+list-style: none; 
+} 
+</style> 
+</head> 
+<body onload="ispc()"> 
+<script> 
+function ispc(){  
+     var userAgentInfo = navigator.userAgent;
+     var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod");  
+     var flag = true;  
+     for (var v = 0; v < Agents.length; v++) {  
+         if (userAgentInfo.indexOf(Agents[v]) > 0) { flag = false; break; }  
+     }
+     let yee=document.getElementById("yee");
+     yee.innerHTML = "is pc side: " + flag;
+     console.log(flag);
+     return flag;  
+  }
+</script> 
+</body> 
+</html> 
