@@ -1,0 +1,14 @@
+{
+    "googledrive" : {
+        "1" : "https://yahoo.com.tw",
+        "2" : "GD$2",
+        "3" : "GD$3",
+        "4" : "GD$4"
+    },
+    "yahoo" : {
+        "site" : "https://yahoo.com.tw",
+        "2" : "GD$2",
+        "3" : "GD$3",
+        "4" : "GD$4"
+    }
+}

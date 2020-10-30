@@ -1,0 +1,76 @@
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script src="../sj2"></script>
+</head>
+
+<body>
+    <div id="content_all" style="padding : 1px 0 15px; *height : 1%">
+        <p>台灣特有的忘記切換輸入法加密法，例如「 vu/ 1l4fu4xu.6503 」是「星爆氣流斬」。</p>
+        <p>特別再為懶人設計的自動 Google 器，懶到你媽都不認得你。</p>
+        <style>
+            #decode {
+                background: #FF9;
+                font-size: 16px;
+                margin-bottom: 12px;
+                padding: 12px;
+            }
+
+            #decode-input,
+            #decode-output {
+                font-size: 18px;
+                width: 360px;
+            }
+
+            #decode-submit {
+                padding: 12px 36px;
+            }
+
+            -->
+        </style>
+        <form id="decode">
+            <p>搜尋： <input id="decode-input" type="text"> <input id="decode-submit" type="submit" value="解碼"></p>
+        </form>
+        <p>
+            <script>
+                (function () {
+                    var $form = $('#decode'),
+                        $input = $form.find('#decode-input')
+
+                    $form.submit(function () {
+                        var str = $input.val().replace(/=/g, '\n').replace(/([1qaz2wsxedcrfv5tgbyhnujm8ik,9ol\.0p;\/-]) /g, '$1='),
+                            tokens = str.split(/[^1qaz2wsx3edc4rfv5tgbyhnujm8ik,9ol\.0p;\/-=]+/),
+                            start = tokens[0] === '' ? 1 : 0,
+                            end = tokens.length - 1;
+
+                        if (tokens[end] === '')
+                            --end;
+
+                        var jsonps = [];
+
+                        for (var i = start; i <= end; ++i) {
+                            (function (token, index) {
+                                jsonps[jsonps.length] = $.getJSON('https://www.google.com/inputtools/request?text=' + encodeURIComponent(token) + '&ime=zh-hant-t-i0&cb=?', function (data) {
+                                    if (data[0] !== 'SUCCESS')
+                                        return;
+
+                                    var r = data[1][0][1][0];
+
+                                    if (r === undefined)
+                                        return;
+
+                                    str = str.replace(token, r);
+                                });
+                            })(tokens[i], i);
+                        }
+
+                        $.when.apply($, jsonps).done(function () {
+                            location.href = "https://www.google.com/search?q=" +str.replace(/\n/g, '=')
+                        });
+
+                        return false;
+                    });
+                })();
+            </script>
+        </p>
+    </div>
+</body>

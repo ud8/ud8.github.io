@@ -1,0 +1,25 @@
+<html>
+<body onload="frdr()">
+</body>
+<script src="/assets/js/string.format.js"></script>
+<script>
+    function frdr() {
+		let ary = location.href.split('?')[1].split('&');
+		let name, storage, stream;
+		for (i = 0; i < ary.length; i++) {
+			if (ary[i].split('=')[0] == 'name')
+				name = ary[i].split('=')[1];
+			else if (ary[i].split('=')[0] == 'storage')
+				storage = ary[i].split('=')[1];
+			else if (ary[i].split('=')[0] == 'stream')
+				stream = ary[i].split('=')[1];
+		}
+        fetch('./{0}.txt'.format(name))
+		.then( res => res.json()
+			.then(data => {
+				location.href = data[String.format(storage)][String.format(stream)]
+			})
+		);
+    }
+</script>
+</html>

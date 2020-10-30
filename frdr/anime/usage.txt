@@ -1,0 +1,1 @@
+/frdr/anime/?name={{txt_name}}&storage={{sel_#1}}&stream={{sel_#2}}

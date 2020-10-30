@@ -1,0 +1,20 @@
+{
+    "googledrive" : {
+        "1" : "GD link 1",
+        "2" : "GD link 2",
+        "3" : "GD link 3",
+        "4" : "GD link 4"
+    },
+    "MEGA" : {
+        "1" : "mega link 1",
+        "2" : "mega link 2",
+        "3" : "mega link 3",
+        "4" : "mega link 4"
+    },
+    "OneDrive" : {
+        "1" : "oe link 1",
+        "2" : "oe link 2",
+        "3" : "oe link 3",
+        "4" : "oe link 4"
+    }
+}
