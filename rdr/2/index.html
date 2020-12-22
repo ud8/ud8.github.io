@@ -1,30 +1,18 @@
 <html>
-<body onload="init()">
-    <input id="lnk" size="100"><br>
-    <button onclick="rdr()">前往網址
-    </button>
+<body>
+    <input id="lnk" size="200"><br>
+    <button onclick="location.href = lnk.value;">前往網址</button>
 </body>
 
 <script>
-    function init() {
-        var url = location.href;
-        if(url.indexOf('fbclid') != -1) {
-            url=url.slice(0, url.indexOf('fbclid')-1);
-        }
-        if(url.indexOf('?') != -1) {
-            //alert(url.slice(url.indexOf('?')+1)) 
-            var lnk = document.getElementById("lnk")
-            lnk.value = url.slice(url.indexOf('?')+1)
-        }
-        
-    }
-    function rdr() {
-        location.href=lnk.value
-    }
-/*
-本機端需使用 https://XXX.aabbcc
-github.io可以用 //XXX.aabbcc
-*/
+    var url = location.href;
+    if(url.indexOf('fbclid') != -1)
+        url = url.slice(0, url.indexOf('fbclid') -1);
+    if(url.indexOf('?') != -1)
+        document.getElementById("lnk").value = url.slice(url.indexOf('?') +1);
 </script>
-
+<!--
+    本機端需使用 https://XXX.aabbcc
+    github.io可以用 //XXX.aabbcc
+-->
 </html>

@@ -1,29 +1,23 @@
-<html>
-<body onload="rdr()"></body>
 <script>
-    function rdr() {
-        var url = location.href;
-        if(url.indexOf('fbclid') != -1)
-            url = url.slice(0, url.indexOf('fbclid')-1);
-        if(url.indexOf('?') != -1) {
-            let key = url.slice(url.indexOf('?')+1).toLowerCase();
-            switch(decodeURI(key)){
-                case "sw":
-                case "solidwork":
-                case "solidworks":
-                    location.href='https://drive.google.com/drive/folders/0By4irSfgy-5mfkFPMlFFdUV1WlVKTldQN0ZLOWF1aGdMTFRIWjRRWkdMR2NqVjdWejhxVHM?usp=sharing';
-                    break;
-                case "adobe":
-                case "全家桶":
-                case "adobe全家桶":
-                    location.href='https://drive.google.com/drive/folders/0By4irSfgy-5mfnhpOExjcmNkb1hrdWZYRnhRbGJKNVZPWXBDWXpLaTkzUk9vRVdJX2tsams?usp=sharing';
-                    break;
-                case "qq":
-                case "qnq":
-                case "q&q":
-                    location.href='https://mg001uolacnz-my.sharepoint.com/:f:/g/personal/21e_istore_app/Etj39IXAqc5InwVmsLXTLs8BT-t3LRajqqFiOk4GO8GP1g?e=ag30vh';
-                    break;
-                default:break;
-}}}
+let _loc = {
+    "sw" : 'https://drive.google.com/drive/folders/0By4irSfgy-5mfkFPMlFFdUV1WlVKTldQN0ZLOWF1aGdMTFRIWjRRWkdMR2NqVjdWejhxVHM?usp=sharing',
+    "adobe" : 'https://drive.google.com/drive/folders/0By4irSfgy-5mfnhpOExjcmNkb1hrdWZYRnhRbGJKNVZPWXBDWXpLaTkzUk9vRVdJX2tsams?usp=sharing',
+    "qq" : 'https://mg001uolacnz-my.sharepoint.com/:f:/g/personal/21e_istore_app/Etj39IXAqc5InwVmsLXTLs8BT-t3LRajqqFiOk4GO8GP1g?e=ag30vh',
+};
+Object.assign(_loc, {
+    "solidwork" : _loc.sw,
+    "solidworks" : _loc.sw,
+    "全家桶" : _loc.adobe,
+    "adobe全家桶" : _loc.adobe,
+    "阿杜伯全家桶" : _loc.adobe,
+    "qaq" : _loc.qq,
+    "qnq" : _loc.qq,
+    "q&q" : _loc.qq,
+})
+if(location.href.indexOf('?') != -1)
+    location.href = _loc[decodeURI(
+        location.href.slice(
+            location.href.indexOf('?') +1
+        ).toLowerCase()
+    )];
 </script>
-</html>
