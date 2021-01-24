@@ -1,0 +1,31 @@
+Language ID for getSystemLanguage.bat
+
+Note:
+  1. numbers start with 0 (like: 0123) will just reutrn 123
+  2. the batch-file %ERRORLEVEL% cant return the letters
+
+Language Name		Language ID
+English (default)	0409
+French			* 040c
+Spanish			* 0c0a
+Italian			0410
+Swedish			* 041D
+Dutch			0413
+Brazilian		0416
+Finnish			* 040b
+Norwegian		0414
+Danish			0406
+Hungarian		* 040e
+Polish			0415
+Russian			0419
+Czech			0405
+Greek			0408
+Portuguese		0816
+Turkish			* 041f
+Japanese		0411
+Korean			0412
+German			0407
+Chinese (Simplified)	0804
+Chinese (Traditional)	0404
+Arabic			0401
+Hebrew			* 040d
